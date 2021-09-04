@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="662.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar layoutX="1.0" layoutY="1.0" prefHeight="26.0" prefWidth="1154.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Open" />
+                        <MenuItem mnemonicParsing="false" onAction="#addAccountAction" text="Add account" />
+                        <MenuItem mnemonicParsing="false" onAction="#composeMessageAction" text="Compose a message" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#optionsAction" text="Options" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TreeView fx:id="emailsTreeView" layoutX="-3.0" layoutY="28.0" prefHeight="637.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0" />
+        <WebView fx:id="emailWebView" layoutX="226.0" layoutY="256.0" prefHeight="406.0" prefWidth="912.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="256.0" />
+        <TableView fx:id="emailsTableView" layoutX="230.0" layoutY="29.0" prefHeight="231.0" prefWidth="912.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+            <columns>
+                <TableColumn fx:id="senderCol" maxWidth="300.0" prefWidth="216.5333709716797" text="sender" />
+                <TableColumn fx:id="subjectCol" maxWidth="250.0" prefWidth="191.20004272460938" text="subject" />
+                <TableColumn fx:id="recepientCol" maxWidth="300.0" prefWidth="225.59991455078125" text="recepient" />
+                <TableColumn fx:id="sizeCol" maxWidth="80.0" prefWidth="58.39996337890625" text="size" />
+                <TableColumn fx:id="dateCol" maxWidth="250.0" prefWidth="226.4000244140625" text="date" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+
+.zone_text >*{
+    -fx-background-color : white;
+}
+
+.error_text {
+    -fx-text-fill : red;
+    -fx-text-font-family : sample;
+}
